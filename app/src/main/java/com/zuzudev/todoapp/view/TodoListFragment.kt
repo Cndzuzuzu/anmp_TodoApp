@@ -17,7 +17,8 @@ import com.zuzudev.todoapp.viewmodel.ListTodoViewModel
 class TodoListFragment : Fragment() {
     private lateinit var binding: FragmentTodoListBinding
     private lateinit var viewModel:ListTodoViewModel
-    private val todoListAdapter = TodoListAdapter(arrayListOf(), { todo -> viewModel.clearTask(todo) })
+    private val todoListAdapter = TodoListAdapter(arrayListOf(), { todo -> viewModel.statDone(todo) })
+//    private val todoListAdapter = TodoListAdapter(arrayListOf(), { todo -> viewModel.clearTask(todo) })
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
